@@ -1,12 +1,14 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
-import  logoio from "../assets/pricing/logoio.png"
-import { brainwave } from "../assets";
+
+
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
+import logoname from "../assets/pricing/logoname.png"
+
 
 const Header = () => {
   const pathname = useLocation();
@@ -35,16 +37,10 @@ const Header = () => {
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
-      <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-      <span className="text-white text-3xl font-bold transition-all relative">
-  Gig Genie
-  <span
-    className="absolute top-0 left-0 w-full h-full text-n-1/50 hover:bg-conic-gradient bg-clip-text text-transparent transition-all"
-    aria-hidden="true"
-  >
-    Gig Genie
-  </span>
-</span>
+         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+        <a className="block w-[12rem] xl:mr-13" href="#hero">
+          <img src={logoname} width={190} height={90} alt="Gig Genie" />
+        </a>
         <nav
           className={`${
             openNavigation ? "flex" : "hidden"
