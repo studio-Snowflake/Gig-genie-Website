@@ -1,17 +1,32 @@
 import {  check } from "../assets";
 import { collabApps, collabContent } from "../constants";
 import Button from "./Button";
+import { curve, heroBackground, robot } from "../assets";
 import Section from "./Section";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
-import  logoio from "../assets/pricing/logoio.png"
+import  logoio from "../assets/pricing/logoio.png";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex ml-4">
+           <BackgroundCircles />
+      <div className="container lg:flex ml-2">
+ 
         <div className="max-w-[69rem]">
-          <h2 className="h1  mb-12 w-53">
-       OUR FEATURES
-          </h2>
+        <h1 className="h1 mb-6">
+           &nbsp; {` `}
+            <span className="inline-block relative  mb-8 ">
+            Our Features{" "}
+              <img
+                src={curve}
+                className="absolute top-full left-0 w-full xl:-mt-2"
+                width={624}
+                height={28}
+                alt="Curve"
+              />
+            </span>
+          </h1>
 
           <ul className="max-w-[49rem] mb-10 md:mb-14">
             {collabContent.map((item) => (
@@ -27,7 +42,7 @@ const Collaboration = () => {
             ))}
           </ul>
 
-          <Button>Try it now</Button>
+          <Button>Get More Information</Button>
         </div>
 
         <div className="lg:ml-auto xl:w-[38rem] mt-4">
@@ -78,6 +93,7 @@ const Collaboration = () => {
             <RightCurve />
           </div>
         </div>
+        
       </div>
     </Section>
   );

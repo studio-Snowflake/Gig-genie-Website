@@ -5,14 +5,25 @@ import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
 import  logoio from "../assets/pricing/logoio.png"
+import Button from "./Button";
+import { curve, heroBackground, robot } from "../assets";
 const Benefits = () => {
   return (
-    <Section id="features">
+    <Section crosses  id="features">
       <div className="container relative z-2">
-        <Heading
-          className="md:max-w-md lg:max-w-2xl"
-          title="Chat Smarter, Not Harder with Brainwave"
-        />
+      <h1 className="relative z-1 max-w-[62rem] mx-auto text-center  lg:mb-[9rem] h1 ">
+      Transforming Visions into Realities:&nbsp; {` `}
+            <span className="inline-block relative  ">
+            Our Project{" "}
+              <img
+                src={curve}
+                className="absolute top-full left-0 w-full xl:-mt-2"
+                width={624}
+                height={28}
+                alt="Curve"
+              />
+            </span>
+          </h1>
 
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
@@ -27,16 +38,9 @@ const Benefits = () => {
                 <h5 className="h5 mb-5">{item.title}</h5>
                 <p className="body-2 mb-6 text-n-3">{item.text}</p>
                 <div className="flex items-center mt-auto">
-                  <img
-                    src={item.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={item.title}
-                  />
-                  <p className="ml-auto font-code text-xs font-bold text-n-1 uppercase tracking-wider">
-                    Explore more
-                  </p>
-                  <Arrow />
+                <Button className="hidden lg:flex" href="#login">
+          get a quote
+        </Button>
                 </div>
               </div>
 

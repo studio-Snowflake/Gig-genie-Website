@@ -7,7 +7,7 @@ import  logoio from "../assets/pricing/logoio.png"
 
 const Pricing = () => {
   return (
-    <Section className="overflow-hidden" id="pricing">
+    <Section crosses  className="overflow-hidden" id="pricing">
       
       <div className="container relative z-2 ">
         

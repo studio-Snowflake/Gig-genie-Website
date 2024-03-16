@@ -87,3 +87,13 @@
   @apply rotate-[-360deg]
 }
 
+
+.custom-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #FFF; /* Example border */
+  border-radius: 50%; /* Example border radius */
+  pointer-events: none; /* Ensure cursor does not interfere with mouse events */
+  z-index: 9999; /* Ensure the cursor stays on top */
+}

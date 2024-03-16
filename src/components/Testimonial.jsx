@@ -1,10 +1,8 @@
 import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import Section from "./Section";
-import { curve, heroBackground, robot } from "../assets";
 
-function LogoScroller() {
+function Testimonial() {
   const row1 = [
     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/7ae42bac3b34999c0db3.png",
     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/b2bd91d7b87b2181ca45.png",
@@ -23,66 +21,74 @@ function LogoScroller() {
     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
   ];
 
+//   const row3 = [
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/9dd55e54b5a28658bf4e.png",
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/0384060dcbf73b6a707c.png",
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/35e044b3354aaa0caed5.png",
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/f50ae7cbf6cc805bdadc.png",
+//     "https://assets.algoexpert.io/spas/main/prod/g523bdeb478-prod/dist/images/6c585c33ca6c71c79bb7.png",
+//   ];
+
   return (
     <Section crosses>
       <AppContainer>
         <Wrapper>
-        <h1 className="relative z-1 max-w-[62rem] mx-auto text-center md:mb-20 lg:mb-[2rem] h1 mb-2">
-            Explore the Possibilities of Technologies&nbsp;with {` `}
-            <span className="inline-block relative te ">
-              Gig Genie{" "}
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
-            </span>
-          </h1>
-          <Note>Our customers have gotten offers from awesome companies.</Note>
           <Marquee>
             <MarqueeGroup>
-              {row1.map((el) => (
-                <ImageGroup key={el}>
+              {row1.map((el, index) => (
+                <Card key={index}>
                   <Image src={el} />
-                </ImageGroup>
+                </Card>
               ))}
             </MarqueeGroup>
             <MarqueeGroup>
-              {row1.map((el) => (
-                <ImageGroup key={el}>
+              {row1.map((el, index) => (
+                <Card key={index}>
                   <Image src={el} />
-                </ImageGroup>
+                </Card>
               ))}
             </MarqueeGroup>
           </Marquee>
           <Marquee>
             <MarqueeGroup2>
-              {row2.map((el) => (
-                <ImageGroup key={el}>
+              {row2.map((el, index) => (
+                <Card key={index}>
                   <Image src={el} />
-                </ImageGroup>
+                </Card>
               ))}
             </MarqueeGroup2>
             <MarqueeGroup2>
-              {row2.map((el) => (
-                <ImageGroup key={el}>
+              {row2.map((el, index) => (
+                <Card key={index}>
                   <Image src={el} />
-                </ImageGroup>
+                </Card>
               ))}
             </MarqueeGroup2>
           </Marquee>
+          {/* <Marquee>
+            <MarqueeGroup3>
+              {row3.map((el, index) => (
+                <Card key={index}>
+                  <Image src={el} />
+                </Card>
+              ))}
+            </MarqueeGroup3>
+            <MarqueeGroup3>
+              {row3.map((el, index) => (
+                <Card key={index}>
+                  <Image src={el} />
+                </Card>
+              ))}
+            </MarqueeGroup3>
+          </Marquee> */}
         </Wrapper>
-        <BackgroundCircles />
       </AppContainer>
-
-      
     </Section>
   );
 }
 
-export default LogoScroller;
+export default Testimonial;
 
 const AppContainer = styled.div`
   width: 100%;
@@ -96,45 +102,25 @@ const AppContainer = styled.div`
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 2900px; /* Adjust maximum width as needed */
-  padding: 0 20px; /* Add padding for better readability on smaller screens */
+  max-width: 1200px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 `;
 
-const Text = styled.div`
-  font-size: 35px;
-  font-weight: 500;
-  margin-bottom: 20px; /* Decrease margin for better spacing on smaller screens */
-  color: #ffffff;
-  text-align: center; /* Center text for better readability */
-  
-  /* Additional CSS */
-  max-width: 62rem;
-  margin-left: auto;
-  margin-right: auto;
-`;
-const Note = styled.div`
-  font-size: 24px; /* Decrease font size for better readability on smaller screens */
-  font-weight: 200;
-  margin-bottom: 80px;  /* Decrease margin for better spacing on smaller screens */
-  color: #a984fc;
-  text-align: center; /* Center text for better readability */
-`;
-
 const Marquee = styled.div`
   display: flex;
   width: 100%;
-  max-width: 1200px; /* Adjust maximum width as needed */
+  max-width: 1200px;
   overflow: hidden;
   user-select: none;
 `;
 
 const scrollX = keyframes`
   from {
-    left: translateX(0);
+    transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
@@ -148,31 +134,37 @@ const common = css`
   justify-content: space-around;
   white-space: nowrap;
   width: 100%;
-  animation: ${scrollX} 30s linear infinite;
 `;
 
 const MarqueeGroup = styled.div`
   ${common}
+  animation: ${scrollX} 30s linear infinite;
 `;
 const MarqueeGroup2 = styled.div`
   ${common}
-  animation-direction: reverse;
-  animation-delay: -3s;
+  animation: ${scrollX} 20s linear infinite;
+`;
+const MarqueeGroup3 = styled.div`
+  ${common}
+  animation: ${scrollX} 10s linear infinite;
 `;
 
-const ImageGroup = styled.div`
-  display: grid;
-  place-items: center;
-  width: 100%; /* Make images take full width of their container */
-  padding: 10px; /* Add padding for better spacing */
+
+const Card = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 900px; /* Adjusted width */
+  height: 200px; /* Adjusted height */
+  background-color: #221C30;
+  border-radius: 8px;
+  margin: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 `;
+
+
 const Image = styled.img`
   object-fit: contain;
-  max-width: 100%; /* Ensure images don't exceed their container */
-  max-height: 100%; /* Ensure images don't exceed their container */
-  border-radius: 0.5rem;
-  aspect-ratio: 16/9;
-  padding: 5px; /* Adjust padding as needed */
-  background-color: white; /* Change background color to white */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 100%;
+  max-height: 100%;
 `;

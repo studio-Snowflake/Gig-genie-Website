@@ -99,33 +99,49 @@ export const roadmap = [
   {
     id: "0",
     title: "Web Development",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-    date: "May 2023",
+      text: `
+      Full stack websites:
+      - Combines front-end (HTML, CSS, JavaScript) and back-end (Python, Ruby, PHP, Node.js) tech for dynamic web apps.
+      
+      Landing page websites:
+      - Single pages focused on conversions, designed to capture info or prompt actions like sign-ups or purchases.
+      
+      Portfolio websites:
+      - Online showcases for individuals' work, skills, and experiences, highlighting projects and contact info.
+      
+      App Development:
+      - Creating software for devices using native (iOS, Android), hybrid (React Native, Flutter), or web-based (HTML, CSS, JS) approaches.
+      
+      Wix and Wordpress:
+      - Popular platforms for website creation and management, offering user-friendly interfaces and customization options.
+    `,
+    date: "ONE",
     status: "done",
     imageUrl: roadmap1,
     colorful: true,
   },
+
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2023",
+    title: "Social Media Management",
+    text: "High-end social media management is all about precision. Utilizing advanced analytics and strategic planning, every detail is optimized for maximum impact. From curated content to strategic scheduling, skilled professionals ensure each post resonates with the audience. With a focus on innovation, these agencies leverage cutting-edge technology to create immersive brand experiences. In essence, elite social media management engineers moments of engagement that elevate brands to new heights.",
+    date: "TWO",
     status: "progress",
     imageUrl: roadmap2,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "May 2023",
+    title: "Brand Identity",
+    text: "Crafting brand identity is a meticulous endeavor. Through strategic planning and creative insight, every element is tailored to resonate with the target audience. From logo design to tone of voice, skilled professionals ensure consistency and authenticity across all touchpoints. Leveraging market research and consumer insights, brand identity is honed to perfection, reflecting the essence of the brand and fostering meaningful connections with consumers. In essence, crafting brand identity is about engineering a cohesive narrative that leaves a lasting impression.",
+    date: "THREE",
     status: "done",
     imageUrl: roadmap3,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "May 2023",
+    title: "AI automation ",
+    text: "AI automation revolutionizes business operations with unparalleled efficiency. Harnessing artificial intelligence, tasks are executed with precision, speed, and accuracy. From data analysis to customer service, AI algorithms streamline processes, saving time and resources. Through machine learning, systems continuously improve, adapting to dynamic environments and optimizing performance. In essence, AI automation empowers businesses to achieve unprecedented levels of productivity and innovation, paving the way for a future of limitless possibilities",
+    date: "FOUR",
     status: "progress",
     imageUrl: roadmap4,
   },
@@ -265,20 +281,19 @@ export const pricing = [
 export const benefits = [
   {
     id: "0",
-    title: "Ask anything",
-    text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
+    title: "Cafe Delicia Legacy",
+    text: "The web development agency crafted a captivating project for Café Delicia Legacy, designing a beautiful animated website featuring seamless social media integration and an enticing menu. This dynamic online platform enhances the café's visibility and invites patrons to experience its unique blend of tradition and innovation effortlessly.",
     backgroundUrl: "./src/assets/benefits/card-1.svg",
-    iconUrl: benefitIcon1,
-    imageUrl: benefitImage2,
+    buttonLink: "https://cssgradient.io/",
   },
   {
     id: "1",
     title: "Improve everyday",
     text: "The app uses natural language processing to understand user queries and provide accurate and relevant responses.",
     backgroundUrl: "./src/assets/benefits/card-2.svg",
-    iconUrl: benefitIcon2,
-    imageUrl: benefitImage2,
+   
     light: true,
+    buttonLink: "https://example.com/2",
   },
   {
     id: "2",
@@ -287,6 +302,7 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-3.svg",
     iconUrl: benefitIcon3,
     imageUrl: benefitImage2,
+    buttonLink: "https://example.com/3",
   },
   {
     id: "3",
@@ -296,14 +312,17 @@ export const benefits = [
     iconUrl: benefitIcon4,
     imageUrl: benefitImage2,
     light: true,
+    buttonLink: "https://example.com/4",
   },
   {
     id: "4",
     title: "Ask anything",
+
     text: "Lets users quickly find answers to their questions without having to search through multiple sources.",
     backgroundUrl: "./src/assets/benefits/card-5.svg",
     iconUrl: benefitIcon1,
     imageUrl: benefitImage2,
+    buttonLink: "https://example.com/5",
   },
   {
     id: "5",
@@ -312,8 +331,10 @@ export const benefits = [
     backgroundUrl: "./src/assets/benefits/card-6.svg",
     iconUrl: benefitIcon2,
     imageUrl: benefitImage2,
+    buttonLink: "https://example.com/6",
   },
 ];
+
 
 export const socials = [
   {

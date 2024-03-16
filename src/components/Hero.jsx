@@ -11,12 +11,13 @@ const Hero = () => {
 
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[12rem] -mt-[2rem]  lg:mb-[10rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="hero"
     >
+             <BackgroundCircles />
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
@@ -32,15 +33,16 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-4xl mx-auto mb-6 text-n-3 lg:mb-8 hover:bg-conic-gradient bg-clip-text transition-all">
+          {/* <Note>Our customers have gotten offers from awesome companies.</Note> */}
+          <p className="body-1 max-w-4xl  mx-auto mb-6 text-n-3 lg:mb-8 hover:bg-conic-gradient bg-clip-text transition-all">
           Unlock the potential of your website with our innovative web solutions. Elevate your online presence with Gig Genie, the leading web development agency.<br></br>Experience enhanced efficiency and productivity with Brainwave's cutting-edge technologies.
           </p>
-          <Button href="/pricing" black bg-conic-gradient hover:text-conic-gradient  >
+          <Button href="/pricing"  >
             Get started
           </Button>
         </div>
-        <div className="relative max-w-[93rem] bg-gradient-to-r from-blue-500 via-purple-400 to-cyan-300    md:max-w-9xl">
-          <div className="relative z-1 p-0.5 bg-transparent   mt-30  rounded rounded-xl bg-gradient-to-r from-blue-500 via-purple-400 to-cyan-300 ">
+        <div className="relative max-w-[93rem]  mb-30">
+          {/* <div className="relati"> */}
             {/* <div className="  bg-transparent"> */}
               {/* <div className="h-[1rem] rounded-t-[9rem] bg-transparent" /> */}
 
@@ -48,8 +50,8 @@ const Hero = () => {
             {/* </div> */}
 
             {/* <Gradient /> */}
-          </div>
-         
+          {/* </div>
+          */}
 
           <BackgroundCircles />
         </div>
